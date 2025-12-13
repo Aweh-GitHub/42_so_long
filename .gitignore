@@ -1,0 +1,8 @@
+*
+
+# Whitelist:
+!.gitignore
+!Makefile
+!libft/*/
+!*.c
+!*.h
