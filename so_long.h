@@ -6,13 +6,12 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 19:37:11 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/13 19:37:35 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/14 17:12:18 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-
 
 
 #endif
