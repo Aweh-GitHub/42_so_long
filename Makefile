@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 11:14:14 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/14 15:51:13 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/14 16:23:06 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ LIBMLX = $(MLX_DIR)/libmlx.a
 SRCS =  main.c \
 
 INCLUDES = -I. -I$(LIBFT_DIR) -I$(MLX_DIR)
-MLX_LIBS = -L$(MLX_DIR) -lmlx -framework Cocoa -framework OpenGL
+MLX_LIBS = -L$(MLX_DIR) -lmlx -lXext -lX11 -lm
 LIBS = $(LIBFT) $(MLX_LIBS)
 
 OBJS = $(SRCS:.c=.o)
@@ -31,7 +31,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT) $(LIBMLX)
-	$(CC) $(OBJS) $(LIBS) -o $(NAME)
+	$(CC) $(OBJS) $(LIBFT) $(MLX_LIBS) -o $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
