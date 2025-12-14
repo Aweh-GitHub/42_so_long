@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 11:14:14 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/14 14:16:53 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/14 15:51:13 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ LIBFT_DIR = libft
 MLX_DIR = libmlx
 
 LIBFT = $(LIBFT_DIR)/libft.a
-LIBMLX = $(MLX_DIR)/libmlx.dylib
+LIBMLX = $(MLX_DIR)/libmlx.a
 
 SRCS =  main.c \
 
