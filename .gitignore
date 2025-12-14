@@ -3,6 +3,9 @@
 # Whitelist:
 !.gitignore
 !Makefile
-!libft/*/
+!/libft/
+!/libft/**
+!/minilibx_mms_20200219
+!/minilibx_mms_20200219/**
 !*.c
 !*.h
