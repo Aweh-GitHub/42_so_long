@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 11:14:14 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/14 17:25:37 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/14 17:52:26 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,14 @@ INCLUDES_LINUX  = -I/usr/include -I$(MLX_DIR_LINUX) -I.
 MLX_DIR_METAL   = ./libmlx_metal
 MLX_FLAGS_METAL = -L$(MLX_DIR_METAL) -lmlx -framework Cocoa -framework Metal -framework MetalKit
 INCLUDES_METAL  = -I$(MLX_DIR_METAL) -I.
-COPY_DYLIB      = cp $(MLX_DIR_METAL)/libmlx.dylib .
+COPY_DYLIB      = install_name_tool -change libmlx.dylib @executable_path/$(MLX_DIR_METAL)/libmlx.dylib $(NAME)
 
 # --- Règles ---
 
 # Si on tape juste "make", on affiche l'aide
 all:
-	@echo "Erreur : Aucune plateforme spécifiée."
-	@echo "Utilisez : 'make linux' ou 'make metal'"
+	@echo "Error: Too few arguments, must specify target plateform"
+	@echo "Error: <make> <[metal] or [linux]>"
 
 # Règle Linux
 linux: MLX_DIR = $(MLX_DIR_LINUX)
@@ -62,7 +62,7 @@ metal: $(NAME)
 # Linkage
 $(NAME): $(OBJS) $(LIBFT)
 	@if [ -z "$(MLX_DIR)" ]; then \
-		echo "Erreur : Utilisez 'make linux' ou 'make metal'"; \
+		echo "Error: <make> <[metal] or [linux]>"; \
 		exit 1; \
 	fi
 	@make -C $(MLX_DIR)
