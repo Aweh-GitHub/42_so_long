@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   t_sprite.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 10:46:29 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 10:34:22 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 10:35:16 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef T_SPRITE_H
+# define T_SPRITE_H
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+typedef struct s_sprite
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->value);
-		lst = lst->next;
-	}
-}
+	void	*idle;
+}	t_sprite;
+
+t_sprite	*t_sprite__new(void *idle);
+
+#endif

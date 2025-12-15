@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   input_quit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 10:46:29 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 09:55:32 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 09:59:54 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mlx.h"
+#include "so_long.h"
+#include "libft/libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	input_quit(t_game *game)
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->value);
-		lst = lst->next;
-	}
+	mlx_destroy_window(game->mlx, game->window);
+	ft_free(game);
+	exit(EXIT_SUCCESS);
 }

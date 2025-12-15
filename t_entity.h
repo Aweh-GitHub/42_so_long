@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   t_entity.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 10:46:29 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 10:30:46 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 10:32:08 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef T_ENTITY_H
+# define T_ENTITY_H
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+#include "so_long.h"
+
+typedef struct s_entity
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->value);
-		lst = lst->next;
-	}
-}
+	t_sprite	*sprite;
+	t_vec2		position;
+}	t_entity;
+
+t_entity	*t_entity__new0(void);
+t_entity	*t_entity__new1(void *idle);
+t_entity	*t_entity__new2(t_sprite *sprite);
+
+#endif

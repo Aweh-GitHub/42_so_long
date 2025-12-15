@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   t_game.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 10:46:29 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 10:32:28 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 10:41:04 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GAME_H
+# define GAME_H
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+typedef struct s_game
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->value);
-		lst = lst->next;
-	}
-}
+	void	*mlx;
+	void	*window;
+	t_list	*entities;
+
+}	t_game;
+
+t_game	*t_game__new(void *mlx);
+void	t_game__free(t_game *game);
+
+#endif

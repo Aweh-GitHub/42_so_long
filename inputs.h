@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   inputs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 10:46:29 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 10:38:15 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 10:39:28 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef INPUTS_H
+# define INPUTS_H
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->value);
-		lst = lst->next;
-	}
-}
+# include "t_game.h"
+
+int		on_key_press(int keycode, void *uncasted_game);
+int		on_key_release(int keycode, void *uncasted_game);
+
+void	input_quit(t_game *game);
+
+#endif

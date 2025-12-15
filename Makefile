@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 11:14:14 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/14 17:52:26 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/15 10:37:09 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,14 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 LIBFT_INC   = -I$(LIBFT_DIR)
 
 # --- Sources ---
-SRCS        = main.c
+SRCS        =	main.c			\
+				input_handler.c	\
+				input_quit.c	\
+				t_game.c		\
+				t_entity.c		\
+				t_sprite.c		\
+				t_vec2.c
+
 OBJS        = $(SRCS:.c=.o)
 
 # --- Configuration Linux ---

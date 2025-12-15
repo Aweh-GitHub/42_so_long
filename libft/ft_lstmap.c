@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:48:05 by thantoni          #+#    #+#             */
-/*   Updated: 2025/11/05 10:48:06 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/15 10:16:10 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_list = NULL;
 	while (lst)
 	{
-		new_content = f(lst->content);
+		new_content = f(lst->value);
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
