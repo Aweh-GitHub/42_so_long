@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 10:23:48 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:35:08 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/16 09:20:40 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,10 @@ t_sprite	*t_sprite__new(void *idle)
 		return (NULL);
 	sprite->idle = idle;
 	return (sprite);
+}
+
+void t_sprite__free(t_sprite *sprite)
+{
+	ft_free(sprite->idle);
+	ft_free(sprite);
 }

@@ -1,24 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_sprite.h                                         :+:      :+:    :+:   */
+/*   t_inputs.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 10:34:22 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/16 09:21:01 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 11:00:34 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 11:13:53 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_SPRITE_H
-# define T_SPRITE_H
-
-typedef struct s_sprite
-{
-	void	*idle;
-}	t_sprite;
-
-t_sprite	*t_sprite__new(void *idle);
-void t_sprite__free(t_sprite *sprite);
-
-#endif
+#include "keycodes.h"
+#include "t_inputs.h"

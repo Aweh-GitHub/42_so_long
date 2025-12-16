@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 19:35:15 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:40:25 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/16 09:22:57 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,13 @@ int	handle_input(int keycode, void *param)
 	ft_printf("keycode: %d\n", keycode);
 	return (0);
 }
+
 void	init_hooks(t_game *game)
 {
 	mlx_hook(game->window, 2, 1L << 0, on_key_press, game);
 	mlx_hook(game->window, 3, 1L << 1, on_key_release, game);
+	// mlx_loop_hook(void *mlx_ptr, int (*func)(void *), void *param);
+	// mlx_loop_hook(game->mlx, );
 }
 
 t_game	*init_game()

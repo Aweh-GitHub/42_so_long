@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 19:37:11 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:39:55 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/16 09:15:01 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 
 # include "libft/libft.h"
 
-# include "inputs.h"
+# include "t_inputs.h"
 
+# include "t_vec2.h"
+# include "t_sprite.h"
+# include "t_entity.h"
 # include "t_game.h"
 # include "t_entity.h"
-# include "t_sprite.h"
-# include "t_vec2.h"
+
 
 # define WINDOW_W 1280
 # define WINDOW_H 720

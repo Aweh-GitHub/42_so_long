@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_sprite.h                                         :+:      :+:    :+:   */
+/*   behaviour_player.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 10:34:22 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/16 09:21:01 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/16 09:23:12 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/16 09:27:18 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_SPRITE_H
-# define T_SPRITE_H
+#include "so_long.h"
 
-typedef struct s_sprite
+void	f_behaviour_loop_player(t_entity *entity, t_game *game)
 {
-	void	*idle;
-}	t_sprite;
-
-t_sprite	*t_sprite__new(void *idle);
-void t_sprite__free(t_sprite *sprite);
-
-#endif
+	ft_printf("im '%p' being updated\n");
+}

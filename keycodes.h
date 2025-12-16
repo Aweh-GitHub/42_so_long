@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keycodes_metal.h                                   :+:      :+:    :+:   */
+/*   keycodes.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 09:13:04 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 09:17:02 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/15 11:03:21 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 # define KEY_ESC                53
 
-# define KEY_W                  13
-# define KEY_A                  0
-# define KEY_S                  1
-# define KEY_D                  2
+# define KEY_UP 13
+# define KEY_DOWN 1
+# define KEY_LEFT 0
+# define KEY_RIGHT 2
 
 # define KEY_UP_ARROW           126
 # define KEY_DOWN_ARROW         125

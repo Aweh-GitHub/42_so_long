@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_sprite.h                                         :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 10:34:22 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/16 09:21:01 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/15 10:47:36 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/15 10:48:23 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_SPRITE_H
-# define T_SPRITE_H
-
-typedef struct s_sprite
+int	ft_clamp(int val, int min, int max)
 {
-	void	*idle;
-}	t_sprite;
-
-t_sprite	*t_sprite__new(void *idle);
-void t_sprite__free(t_sprite *sprite);
-
-#endif
+	if (val < min)
+		return (min);
+	if (val > max)
+		return (max);
+	return (val);
+}

@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:13:16 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:16:19 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/15 10:53:45 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ char			clast(char *str);
 char			is_cfirst(char *str, char cmp);
 char			is_clast(char *str, char cmp);
 int				ft_free(void *ptr);
+int				ft_clamp(int val, int min, int max);
 char			ter_c(int con, char val_true, char val_false);
 int				ter_i(int con, int val_true, int val_false);
 long unsigned	ter_lu(int con, \

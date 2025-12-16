@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 09:19:51 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:34:05 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/15 11:09:57 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_game	*t_game__new(void *mlx)
 		return (ft_free(game), ft_free(mlx), NULL);
 	game->mlx = mlx;
 	game->window = mlx_new_window(mlx, WINDOW_W, WINDOW_H, "So Long");
+	game->inputs = malloc(sizeof(t_inputs));
 	return (game);
 }
 
@@ -32,5 +33,6 @@ void	t_game__free(t_game *game)
 		return ;
 	ft_free(game->mlx);
 	ft_free(game->window);
+	ft_free(game->inputs);
 	ft_free(game);
 }
