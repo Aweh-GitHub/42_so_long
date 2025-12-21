@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 11:14:14 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/15 10:37:09 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/21 12:22:09 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,24 +20,34 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 LIBFT_INC   = -I$(LIBFT_DIR)
 
-# --- Sources ---
-SRCS        =	main.c			\
-				input_handler.c	\
-				input_quit.c	\
-				t_game.c		\
-				t_entity.c		\
-				t_sprite.c		\
-				t_vec2.c
+# --- Sources ---					
+SRCS        =	main.c									\
+				render.c								\
+				utils_time.c							\
+				input_handler.c							\
+				input_quit.c							\
+				structs/t_entity.c						\
+				structs/t_game.c						\
+				structs/t_mlx_behaviour.c				\
+				structs/t_sprite.c						\
+				structs/t_vec2.c						\
+				structs/t_assets.c						\
+				structs/t_asset_img.c					\
+				entity_factory/entity_factory.c			\
+				entity_factory/entity_player.c			\
+				entity_factory/entity_player_bodypart.c	\
+				entity_factory/entity_consumable.c		\
+				entity_factory/entity_collider.c		\
 
 OBJS        = $(SRCS:.c=.o)
 
 # --- Configuration Linux ---
-MLX_DIR_LINUX   = ./libmlx_linux
+MLX_DIR_LINUX   = libmlx_linux
 MLX_FLAGS_LINUX = -L$(MLX_DIR_LINUX) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
 INCLUDES_LINUX  = -I/usr/include -I$(MLX_DIR_LINUX) -I.
 
 # --- Configuration Metal (macOS) ---
-MLX_DIR_METAL   = ./libmlx_metal
+MLX_DIR_METAL   = libmlx_metal
 MLX_FLAGS_METAL = -L$(MLX_DIR_METAL) -lmlx -framework Cocoa -framework Metal -framework MetalKit
 INCLUDES_METAL  = -I$(MLX_DIR_METAL) -I.
 COPY_DYLIB      = install_name_tool -change libmlx.dylib @executable_path/$(MLX_DIR_METAL)/libmlx.dylib $(NAME)

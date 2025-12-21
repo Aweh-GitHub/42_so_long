@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_sprite.h                                         :+:      :+:    :+:   */
+/*   t_list__new.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 10:34:22 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/16 09:21:01 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/16 15:04:00 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/16 15:05:07 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_SPRITE_H
-# define T_SPRITE_H
+#include "../libft.h"
+#include <stdlib.h>
 
-typedef struct s_sprite
+t_list	*t_list__new(void *value)
 {
-	void	*idle;
-}	t_sprite;
+	t_list	*list;
 
-t_sprite	*t_sprite__new(void *idle);
-void t_sprite__free(t_sprite *sprite);
-
-#endif
+	list = malloc(sizeof(t_list));
+	list->value = value;
+	return (list);
+}

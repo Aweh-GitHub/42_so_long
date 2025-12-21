@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   behaviour_player.c                                 :+:      :+:    :+:   */
+/*   t_list__add.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/16 09:23:12 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/16 09:27:18 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/21 12:32:05 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/21 12:44:38 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../libft.h"
 
-void	f_behaviour_loop_player(t_entity *entity, t_game *game)
+void	t_list__add0(t_list **lst, t_list *new)
 {
-	ft_printf("im '%p' being updated\n");
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}
+
+void	t_list__add1(t_list **lst, void *value)
+{
+	t_list__add0(lst, t_list__new(value));
 }

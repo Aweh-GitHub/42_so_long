@@ -6,7 +6,7 @@
 #    By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 18:59:12 by thantoni          #+#    #+#              #
-#    Updated: 2025/12/15 10:53:52 by thantoni         ###   ########.fr        #
+#    Updated: 2025/12/21 12:36:07 by thantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,9 @@ SRCS =	ft_isalpha.c							\
 		extras/is_clast.c						\
 		extras/ft_free.c						\
 		extras/ft_clamp.c						\
+		maths/powx.c								\
+		maths/sqrt.c							\
+		maths/lerp.c							\
 		ter/ter_c.c								\
 		ter/ter_i.c								\
 		ter/ter_lu.c							\
@@ -90,7 +93,9 @@ SRCS =	ft_isalpha.c							\
 		ft_printf/handlers/ft_printudec.c		\
 		ft_printf/handlers/ft_printhexlow.c		\
 		ft_printf/handlers/ft_printhexupr.c		\
-		ft_printf/handlers/ft_printpercent.c
+		ft_printf/handlers/ft_printpercent.c	\
+		list/t_list__new.c						\
+		list/t_list__add.c						\
 
 OBJS = $(SRCS:.c=.o)
 

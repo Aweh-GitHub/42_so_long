@@ -220,7 +220,7 @@ void	*mlx_int_parse_xpm(t_xvar *xvar,void *info,int info_size,char *(*f)())
 
 		if (!(img = mlx_new_image(xvar,width,height)))
 				RETURN;
-		opp = img->bpp/8;
+		opp = img->pixel_size/8;
 
 
 		i = height;

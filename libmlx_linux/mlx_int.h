@@ -88,7 +88,7 @@ typedef struct	s_img
 	Pixmap			pix;
 	GC				gc;
 	int				size_line;
-	int				bpp;
+	int				pixel_size;
 	int				width;
 	int				height;
 	int				type;

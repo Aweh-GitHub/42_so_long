@@ -6,7 +6,7 @@
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:13:16 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 10:53:45 by thantoni         ###   ########.fr       */
+/*   Updated: 2025/12/21 12:45:17 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,15 @@ long unsigned	ter_lu(int con, \
 	long unsigned val_true, long unsigned val_false);
 void			*ter_p(int con, void *val_true, void *val_false);
 char			*ter_s(int con, char *val_true, char *val_false);
+
+double			powx(double value, int pow);
+double			pow2(double value);
+double			pow3(double value);
+double			sqrt(double value);
+double			lerp(double origin, double target, double progress);
+
+t_list			*t_list__new(void *value);
+void			t_list__add0(t_list **lst, t_list *new);
+void			t_list__add1(t_list **lst, void *value);
 
 #endif

@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_inputs.h                                         :+:      :+:    :+:   */
+/*   sqrt.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantoni <thantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 10:38:15 by thantoni          #+#    #+#             */
-/*   Updated: 2025/12/15 11:17:55 by thantoni         ###   ########.fr       */
+/*   Created: 2025/12/20 13:32:24 by thantoni          #+#    #+#             */
+/*   Updated: 2025/12/20 13:33:30 by thantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_INPUTS_H
-# define T_INPUTS_H
-
-# include "t_vec2.h"
-
-# define PRESSED 1
-# define RELEASED 0
-# define INPUT_UP 0
-# define INPUT_DOWN 1
-# define INPUT_LEFT 2
-# define INPUT_RIGHT 3
-
-typedef struct s_inputs
+double	sqrt(double value)
 {
-	int		mov_pressed_inputs[4];
-	t_vec2	mov_axis;
-}	t_inputs;
+	double	result;
+	double	tmp;
 
-int		on_key_press(int keycode, void *uncasted_game);
-int		on_key_release(int keycode, void *uncasted_game);
-
-#endif
+	if (value < 0)
+		return (0);
+	if (value == 0 || value == 1)
+		return (value);
+	result = value / 2;
+	tmp = 0;
+	while (result != tmp)
+	{
+		tmp = result;
+		result = ((value / tmp) + tmp) / 2;
+	}
+	return (result);
+}
